@@ -1,0 +1,57 @@
+ai_agent/
+│
+├── main.py                    # 应用程序入口点，初始化并启动AI Agent
+│
+├── core/                      # 核心引擎模块
+│   ├── __init__.py
+│   ├── nlp_processor.py       # 自然语言处理模块，分析用户输入并拆解任务
+│   ├── memory_retriever.py    # 任务记忆检索模块，在历史任务中查找相似任务
+│   ├── task_executor.py       # 任务执行引擎，负责调度和执行任务
+│   └── error_handler.py       # 错误处理模块，捕获、分析和处理执行异常
+│
+├── interface/                 # 用户交互层
+│   ├── __init__.py
+│   ├── cli.py                 # 命令行界面，处理用户输入和输出
+│   ├── task_display.py        # 任务显示模块，格式化任务列表和状态
+│   └── feedback_collector.py  # 用户反馈收集器，获取和记录用户反馈
+│
+├── services/                  # 功能服务模块
+│   ├── __init__.py
+│   ├── api_connector.py       # API连接器，管理外部API调用
+│   ├── cmd_executor.py        # 命令行执行器，安全执行系统命令
+│   └── python_manager.py      # Python脚本管理器，处理Python脚本创建和执行
+│
+├── data_manager/              # 数据管理模块
+│   ├── __init__.py
+│   ├── storage.py             # 存储管理器，处理文件读写操作
+│   ├── task_recorder.py       # 任务记录器，保存任务执行详情
+│   ├── knowledge_base.py      # 知识库管理器，更新和查询任务知识
+│   └── log_manager.py         # 日志管理器，维护详细执行日志
+│
+├── models/                    # 数据模型定义
+│   ├── __init__.py
+│   ├── task.py                # 任务模型，定义任务和步骤的数据结构
+│   ├── execution_result.py    # 执行结果模型，定义成功和错误结果的数据结构
+│   └── user_feedback.py       # 用户反馈模型，定义反馈数据结构
+│
+├── utils/                     # 工具函数
+│   ├── __init__.py
+│   ├── text_similarity.py     # 文本相似度计算工具
+│   ├── id_generator.py        # 唯一ID生成器
+│   ├── time_utils.py          # 时间处理工具
+│   └── config_loader.py       # 配置加载器
+│
+├── data/                      # 数据存储目录
+│   ├── tasks_records.json     # 任务记录JSON文件
+│   ├── task_knowledge_base.json # 任务知识库JSON文件
+│   ├── user_feedback.xlsx     # 用户反馈Excel文件
+│   ├── logs/                  # 任务执行日志目录
+│   │   └── T20250510001_log.txt # 示例任务日志
+│   └── scripts/               # 生成的Python脚本目录
+│
+├── config/                    # 配置文件目录
+│   ├── settings.json          # 应用程序配置
+│   ├── nlp_config.json        # NLP模块配置
+│   └── execution_config.json  # 执行引擎配置
+│
+└── README.md                  # 项目说明文档
